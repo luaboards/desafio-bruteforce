@@ -33,6 +33,8 @@ Brute Force com FTP.
 O objetivo era descobrir credenciais válidas no serviço vsftpd (porta 21).
 
 Comando utilizado
+
+
 ```medusa -h IP_DO_METASPLOITABLE -U users.txt -P pass.txt -M ftp -t 6```
 
 A validação do acesso foi feita por meio do comando ```ftp -n IP_DO_METASPLOITABLE```, conforme imagem [anexada](medusa-ftp.png).
@@ -44,9 +46,9 @@ O objetivo era mapear usuários reais do sistema e testar uma única senha fraca
 Segue as etapas do que foi realizado:
 
    1. Enumeração de usuários
-     - comando: ```enum4linux -U IP_DO_METASPLOITABLE```, conforme imagem anexada [1](spraying-1.png) e [2](spraying-2.png).
+      - comando: ```enum4linux -U IP_DO_METASPLOITABLE```, conforme imagem anexada [1](spraying-1.png) e [2](spraying-2.png).
         
-   2. Ataque com medusa no módulo SAMBA (SMB)
+   3. Ataque com medusa no módulo SAMBA (SMB)
       - comando: ```medusa -h IP_DO_METASPLOITABLE -U smb_users.txt -p "msfadmin" -M smbnt```
 
 A validação do acesso foi feita pelo comando ```smbclient -L //IP_DO_METASPLOITABLE/ -U msfadmin%msfadmin```, conforme imagem [anexada](medusa-smb-validação.png).
@@ -61,7 +63,7 @@ Também foi observado que a utilização de módulos HTTP genéricos com base em
   2. Execução Eficaz com Hydra (Requisição POST com Validação de Erro):
 
      
-      Após diversas tentativas a ferramenta que trouxe o resultado esperado foi a **Hydra**, conforme imagem [anexada](hydra-dvwa.png)
+      Após diversas tentativas a ferramenta que trouxe o resultado esperado foi a **Hydra**, conforme imagem [anexada](hydra-dvwa.png).
 
        Comando utilizado
   
