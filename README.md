@@ -71,6 +71,6 @@ Também foi observado que a utilização de módulos HTTP genéricos com base em
 # 6. Recomendação de mitigação
 
    - Requisição de senhas fortes: exigir senhas com número mínimo de caracteres e com grau elevado de complexidade.
-   - Bloqueio de contas: determinar o número de vezes necessário para que a conta seja bloqueado após diversas tentativas incorretas.
+   - Bloqueio de contas: determinar o número de vezes necessário para que a conta seja bloqueada após diversas tentativas incorretas.
    - Múltiplo fator de autenticação: para que, mesmo se a senha seja descoberta através do *brute force* ou *spraying*, o acesso seja negado.
    - Uso de CAPTCHA
