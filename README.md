@@ -15,7 +15,7 @@ Foram elaboradas listas simples contendo usuários e senhas fracas comuns:
 
 - Lista de Usuários (users.txt)
    - user
-   - msfadim
+   - msfadmin
    - admin
    - root
 
