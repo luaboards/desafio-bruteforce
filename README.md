@@ -58,7 +58,7 @@ O objetivo era automatizar o teste de credenciais na página de login web ***(/d
 
   1. Análise de Falso Positivo:
        - Durante os testes de automação foi percebido a geração de diversos falsos positivos ao utilizar a ferramenta **Medusa**, utilizei o **Dio Agent** para obter suporte mais direcionado.
-Também foi observado que a utilização de módulos HTTP genéricos com base em respostas de código de status (200 OK), o resultado analisado em todas as senhas deve-se por conta de não havido análise contextual do corpo HTML da resposta. [Exemplo 1](spraying
+Também foi observado que a utilização de módulos HTTP genéricos com base em respostas de código de status (200 OK), o resultado analisado em todas as senhas deve-se por conta de não havido análise contextual do corpo HTML da resposta. [Exemplo 1](spraying.png)
 
   2. Execução Eficaz com Hydra (Requisição POST com Validação de Erro):
 
