@@ -13,7 +13,7 @@ Este projeto tem como objetivo simular cenários de testes de força bruta (Brut
 
 Foram elaboradas listas simples contendo usuários e senhas fracas comuns:
 
-- Lista de Usuários (users.txt)
+- Lista de usuários (users.txt)
    - user
    - msfadmin
    - admin
@@ -35,7 +35,7 @@ O objetivo era descobrir credenciais válidas no serviço vsftpd (porta 21).
 Comando utilizado
 ```medusa -h IP_DO_METASPLOITABLE -U users.txt -P pass.txt -M ftp -t 6```
 
-A validão do acesso foi feita por meio do comando ```ftp -n IP_DO_METASPLOITABLE```, conforme imagem [anexada](medusa-ftp.png).
+A validação do acesso foi feita por meio do comando ```ftp -n IP_DO_METASPLOITABLE```, conforme imagem [anexada](medusa-ftp.png).
 
 # 4. Password Spraying em SMB com Enumeração de Usuários
 
