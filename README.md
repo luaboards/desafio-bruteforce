@@ -35,7 +35,7 @@ O objetivo era descobrir credenciais válidas no serviço vsftpd (porta 21).
 Comando utilizado
 ```medusa -h IP_DO_METASPLOITABLE -U users.txt -P pass.txt -M ftp -t 6```
 
-A validão do acesso foi feita por meio do comando **ftp -n IP_DO_METASPLOITABLE**, conforme imagem anexada.
+A validão do acesso foi feita por meio do comando ```ftp -n IP_DO_METASPLOITABLE```, conforme imagem [anexada](medusa-ftp.png).
 
 # 4. Password Spraying em SMB com Enumeração de Usuários
 
@@ -44,24 +44,24 @@ O objetivo era mapear usuários reais do sistema e testar uma única senha fraca
 Segue as etapas do que foi realizado:
 
    1. Enumeração de usuários
-     - comando: **enum4linux -U IP_DO_METASPLOITABLE**
+     - comando: ```enum4linux -U IP_DO_METASPLOITABLE```, conforme imagem anexada [1](spraying-1.png) e [2](spraying-2.png).
         
    2. Ataque com medusa no módulo SAMBA (SMB)
       - comando: ```medusa -h IP_DO_METASPLOITABLE -U smb_users.txt -p "msfadmin" -M smbnt```
 
-A validação do acesso foi feita pelo comando ```smbclient -L //IP_DO_METASPLOITABLE/ -U msfadmin%msfadmin```, conforme imagem anexada.
+A validação do acesso foi feita pelo comando ```smbclient -L //IP_DO_METASPLOITABLE/ -U msfadmin%msfadmin```, conforme imagem [anexada](medusa-smb-validação.png).
 
 # 5. Cenário de Automação em Formulário Web (DVWA)
 O objetivo era automatizar o teste de credenciais na página de login web ***(/dvwa/login.php)***.
 
   1. Análise de Falso Positivo:
-       - Durante os testes de automação foi percebido a geração de diversos falsos positivos ao utilizar a ferramenta **medusa**, utilizei o **Dio Agent** para obter suporte mais direcionado.
-Também foi observado que a utilização de módulos HTTP genéricos com base em respostas de código de status (200 OK), o resultado analisado em todas as senhas deve-se por conta de não havido análise contextual do corpo HTML da resposta.
+       - Durante os testes de automação foi percebido a geração de diversos falsos positivos ao utilizar a ferramenta **Medusa**, utilizei o **Dio Agent** para obter suporte mais direcionado.
+Também foi observado que a utilização de módulos HTTP genéricos com base em respostas de código de status (200 OK), o resultado analisado em todas as senhas deve-se por conta de não havido análise contextual do corpo HTML da resposta. [Exemplo 1](spraying
 
   2. Execução Eficaz com Hydra (Requisição POST com Validação de Erro):
 
      
-      Após diversas tentativas a ferramenta que trouxe o resultado esperado foi a **Hydra**
+      Após diversas tentativas a ferramenta que trouxe o resultado esperado foi a **Hydra**, conforme imagem [anexada](hydra-dvwa.png)
 
        Comando utilizado
   
